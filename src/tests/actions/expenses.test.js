@@ -1,4 +1,12 @@
-import { addExpense, removeExpense, editExpense } from '../../actions/expenses';
+import configureStore from 'redux-mock-store';
+import thunk from 'redux-thunk';
+import { startAddExpense, addExpense, removeExpense, editExpense } from '../../actions/expenses';
+import expenses from '../fixtures/expenses';
+import database from '../../firebase/firebase';
+
+beforeEach(() => {
+    database.ref('expenses').set(expensesData)
+});
 
 test('should setup remove expense action object', () => {
     const action = removeExpense({id:'123abc'});
