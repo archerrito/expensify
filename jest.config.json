@@ -4,6 +4,6 @@
         "<rootDir>/src/tests/setupTest.js"
     ],
     "setupFiles": [
-        "<rootDir>/src/test/setupTests.js"
+        "<rootDir>/src/tests/setupTests.js"
     ]
 }
