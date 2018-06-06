@@ -7,7 +7,7 @@ export default (expenses, {text, sortBy, startDate, endDate}) => {
         //if is then checks if greater than start date, so filters out
         const createdAtMoment = moment(expense.createdAt);
         const startDateMatch = startDate ? startDate.isSameOrBefore(createdAtMoment, 'day'): true;
-        const endDateMatch = endDate ? endDate.isSameOrBefore(createdAtMoment, 'day'): true;
+        const endDateMatch = endDate ? endDate.isSameOrAfter(createdAtMoment, 'day'): true;
         // //Pre-moment
         // const startDateMatch = typeof startDate !== 'number' || expense.createdAt >= startDate;
         // const endDateMatch = typeof endDate !== 'number' || expense.createdAt <= endDate;
